@@ -15,7 +15,7 @@ export default function App() {
   const [gymDone, setGymDone] = useState(false);
 
   const toggleSalah = (name: string) => {
-    setSalah((prev) => ({ ...prev, [name]: !prev[name] }));
+    setSalah((prev) => ({ ...prev, [name]: !prev[name as keyof typeof prev] }));
   };
 
   const toggleGym = () => setGymDone(!gymDone);
@@ -43,7 +43,7 @@ export default function App() {
         {Object.keys(salah).map((s) => (
           <div key={s} className="flex justify-between items-center">
             <span className="capitalize">{s}</span>
-            <input type="checkbox" checked={salah[s]} onChange={() => toggleSalah(s)} />
+            <input type="checkbox" checked={salah[s as keyof typeof salah]} onChange={() => toggleSalah(s)} />
           </div>
         ))}
       </div>
