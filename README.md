@@ -1,2 +1,2 @@
-# THE-TRACKER-
-It's for my personal use
+# THE MUSLIM-TRACKER-
+a daily Salah, Coding & Gym tracker app for Muslims
